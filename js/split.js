@@ -33,7 +33,6 @@ jQuery(document).ready( function($){
 	$('.page-nav ul li').click( function(){
 		$('.page-nav ul li.active').removeClass('active');
 		$(this).addClass('active');
-
 	});
 	/*-----Scroll Navigation-----*/
 	$('a').on('click', function() {
