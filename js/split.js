@@ -1,4 +1,6 @@
 jQuery(document).ready( function($){
+	$.ajaxSetup({ dataType: "jsonp" });
+
 	/*-----Image Splitter javaScript-----*/
 	$('.coder-wrapper').on( "mouseenter", function() {
 		$(this).closest('.split-wrapper').find('.divider-bar').css({
