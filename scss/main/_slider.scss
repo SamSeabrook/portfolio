@@ -4,18 +4,8 @@
   text-transform: uppercase;
   width: 960px;
   height: 550px;
-  margin: 0 auto;
+  margin: $bannerHeight auto;
   position: relative;
-}
-
-.hero-text {
-  position: absolute;
-  color: ghostwhite;
-  top: 25px;
-  left: 25px;
-  width: 150px;
-  line-height: 20px;
-  z-index: 99;
 }
 
 .hero-btn {
@@ -33,13 +23,13 @@
 
   transition: all 150ms ease-in-out;
   overflow: hidden;
-  z-index: 11;
+  z-index: 5;
   
   span {
     z-index: 10;
     position: relative;
   }
-  &:after {
+  &:after { /* Span rolling up animation */
     content: "";
     display: block;
     position: absolute;
@@ -48,17 +38,25 @@
     width: 100%;
     height: 100%;
     background: white;
-    z-index: 5;
+    z-index: 7;
     transition: all 150ms ease-in-out;
   }
-
-
   &:hover {
     color: black;
     &:after{
       top: 0;
     }
   }
+}
+
+.hero-textwrapper {
+  position: absolute;
+  color: ghostwhite;
+  padding-top: 25px;
+  padding-left: 25px;
+  width: 25%;
+  height: 100%;
+  line-height: 20px;
 }
 
 .divider-bar {
@@ -87,7 +85,7 @@
   width: 100%;
   height: 100%;
   position: relative;
-  background: url("../images/closeHairSmall.jpg") no-repeat;
+  background: url("../images/banker.jpg") no-repeat;
   background-position: 0 -20px;
 }
 
@@ -116,6 +114,6 @@
   -webkit-transform: translateX(-75%);
   transform: translateX(-75%);
 
-  background: url("../images/closeHatSmall.jpg") no-repeat;
+  background: url("../images/coder.jpg") no-repeat;
   background-position: 0 -25px;
 }

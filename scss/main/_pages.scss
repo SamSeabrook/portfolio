@@ -1,0 +1,50 @@
+section:before {
+	content: '';
+	display: block;
+	position: relative;
+	width: 0;
+	height: $bannerHeight;
+	margin-top: -$bannerHeight
+}
+
+.page-nav {
+	background-color: #333;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+li {
+	float: left;
+	a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	&:hover:not(.active) {
+		background-color: red;
+	}
+}
+
+.active {
+	background-color: green;
+}
+
+
+.page {
+	height: 800px;
+	font-size: 50px;
+	text-align: center;
+}
+
+/*#about {background-color: red;}
+#work {background-color: orange;}
+#resume {background-color: yellow;}
+#contact {background-color: green;}
+#more {background-color: blue;}*/
