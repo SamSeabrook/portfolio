@@ -14,11 +14,14 @@ section:before {
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: $bannerHeight;
 	z-index: 99;
+	display: none;
 }
 
 li {
 	float: left;
+	font-size: 16px;
 	a {
 		display: block;
 		color: white;
