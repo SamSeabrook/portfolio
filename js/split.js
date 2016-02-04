@@ -1,7 +1,6 @@
 jQuery(document).ready( function($){
-	//$.ajaxSetup({ dataType: "jsonp" });
-
-	/*-----Image Splitter javaScript-----*/
+	
+	/*-----Image Splitter-----*/
 	// When cursor enters "right-side" container, slide divider to reveal coder image
 	$('.coder-wrapper').on( "mouseenter", function() {
 		$(this).closest('.split-wrapper').find('.divider-bar').css({
@@ -33,32 +32,32 @@ jQuery(document).ready( function($){
 		});
 	});
 
-	/*-----Navigation Bar Scroll View-----*/
+	/*-----Live Update Active View-----*/
+	// This will highlight in the nav bar the 'active' page user is viewing
 	$(window).scroll( function() {
-		/* If distance from current element to top of page is greater than
-		* distance from '#about' page to top of page minus banner height */
-		if ( $(this).scrollTop() > ($('#about').offset().top - $('.page-nav').height()) ){
+		var about = $('#about').offset().top;
+		var banner = $('.page-nav').height();
+		var windowScroll = $(window).scrollTop();
+
+		if (windowScroll > (about - banner)) {
 			$('.page-nav').fadeIn(300);
+			$('.page').each(function(i) {
+				if ($(this).position().top <= (windowScroll)) {
+					$('.page-nav li a.active').removeClass('active');
+					$('.page-nav li a').eq(i+1).addClass('active');
+				}
+			});
 		} else {
 			$('.page-nav').fadeOut(300);
+			$('.page-nav li.active').removeClass('active');
 		}
-	});
-
-	/*-----Active Link-----*/
-	$('.hero-btn').click( function(){
-		$('.page-nav ul li.active').removeClass('active');
-		$('.page-nav ul li.start').addClass('active');
-	});
-	$('.page-nav ul li').click( function(){
-		$('.page-nav ul li.active').removeClass('active');
-		$(this).addClass('active');
-	});
+	}).scroll();
 
 	/*-----Scroll Navigation-----*/
+	// Scrolls screen to selected anchor on page
 	$('a').on('click', function() {
 		var location = (this).getAttribute("href");
 		$('html body').animate({'scrollTop':$(location).offset().top}, 500);
 		event.preventDefault();
 	});
-
 });
