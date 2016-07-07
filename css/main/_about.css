@@ -1,0 +1,64 @@
+#top {
+  height: 100vh;
+}
+
+.about-me {
+  outline: 1px dashed red;
+}
+
+.slider {
+  position: relative;
+  margin: 0 auto;
+  height: 40vh;
+  width: 900px;
+  outline: 1px solid green;
+}
+
+.dot {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border: 1px solid #999;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.traits {
+  display: inline-block;
+  position: relative;
+  height: 20vh;
+  width: 900px;
+  margin: 20px 0;
+  outline: 1px dashed black;
+}
+
+.trait {
+  display: inline-block;
+  text-align: center;
+  height: 20vh;
+  width: 275px;
+  margin: 0 auto;
+  outline: 1px dashed blue;
+}
+
+.trait:first-child {
+  position: absolute;
+  left: 0;
+}
+
+.trait:last-child {
+  position: absolute;
+  right: 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}

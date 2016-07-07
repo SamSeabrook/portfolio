@@ -35,11 +35,10 @@ jQuery(document).ready( function($){
 	/*-----Live Update Active View-----*/
 	// This will highlight in the nav bar the 'active' page user is viewing
 	$(window).scroll( function() {
-		var about = $('#about').offset().top;
 		var banner = $('.page-nav').height();
 		var windowScroll = $(window).scrollTop();
 
-		if (windowScroll > (about - banner)) {
+		if (windowScroll > (banner)) {
 			$('.page-nav').fadeIn(300);
 			$('.page').each(function(i) {
 				if ($(this).position().top <= (windowScroll)) {

@@ -1,0 +1,98 @@
+.about-me {
+  outline: 1px dashed red;
+}
+
+.slider {
+  position: relative;
+  margin: 0 auto;
+  height: 40vh;
+  width: 90%;
+  outline: 1px solid green;
+  overflow: hidden;
+}
+
+.slider li {
+  list-style: none;
+  position: absolute;
+}
+
+.slider input {
+  display: none;
+}
+
+/* Navigation Dots */
+.slider label {
+  position: absolute;
+  display: block;
+  background-color: #ddd;
+  border: 1px solid #111;
+  border-radius: 100%;
+  left: 50%;
+  bottom: 3rem;
+  height: .6rem;
+  width: .6rem;
+  transition: .5s;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slider:hover label {
+  opacity: 1;
+  visibility: visible;
+}
+.slider input:checked + label {
+  background-color: #333;
+}
+.slider:hover li:nth-child(1) label {
+  left: 48%;
+}
+.slider:hover li:nth-child(2) label {
+  left: 50%;
+}
+.slider:hover li:nth-child(3) label {
+  left: 52%;
+}
+
+.slider img {
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+  transition: .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.slider li input:checked ~ img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.traits {
+  display: inline-block;
+  font-size: .5em;
+  position: relative;
+  height: 35vh;
+  width: 90%;
+  margin: 20px 0;
+  outline: 1px dashed black;
+}
+
+.trait {
+  display: inline-block;
+  text-align: center;
+  height: 35vh;
+  width: 30%;
+  margin: 0 auto;
+  outline: 1px dashed blue;
+}
+
+.trait:first-child {
+  position: absolute;
+  left: 0;
+}
+.trait:last-child {
+  position: absolute;
+  right: 0;
+}

@@ -1,0 +1,125 @@
+#top {
+  height: 100vh;
+  background: #999;
+}
+/* Split Hero Styles */
+.split-wrapper { 
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 960px;
+  height: 80vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-btn {
+  position: absolute;
+  display: inline-block;
+  right: 25px;
+  bottom: 25px;
+  width: 200px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  color: ghostwhite;
+  line-height: 25px;
+  border: 2px solid ghostwhite;
+
+  transition: all 150ms ease-in-out;
+  overflow: hidden;
+  z-index: 5;
+  
+  span {
+    z-index: 10;
+    position: relative;
+  }
+  &:after { /* Span rolling up animation */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 7;
+    transition: all 150ms ease-in-out;
+  }
+  &:hover {
+    color: black;
+    &:after{
+      top: 0;
+    }
+  }
+}
+
+.hero-textwrapper {
+  position: absolute;
+  color: ghostwhite;
+  padding-top: 25px;
+  padding-left: 25px;
+  width: 25%;
+  height: 100%;
+  line-height: 20px;
+}
+
+.divider-bar {
+  position: absolute;
+  width: 4px;
+  left: 74%;
+  top: -10px;
+  bottom: -10px;
+  background-image: -webkit-linear-gradient(top,rgba(59,144,203,0) 0,#64b700 2%,#64b700 98%,rgba(59,144,203,0) 100%);
+  background-image: -moz-linear-gradient(top,rgba(59,144,203,0) 0,#64b700 2%,#64b700 98%,rgba(59,144,203,0) 100%);
+  background-image: -o-linear-gradient(top,rgba(59,144,203,0) 0,#64b700 2%,#64b700 98%,rgba(59,144,203,0) 100%);
+  background-image: linear-gradient(to bottom,rgba(59,144,203,0) 0,#64b700 2%,#64b700 98%,rgba(59,144,203,0) 100%); 
+  -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,0.4); 
+  -moz-box-shadow: 0 0 10px 1px rgba(0,0,0,0.4);
+  box-shadow: 0 0 10px 1px rgba(0,0,0,0.4);
+}
+
+.banker-wrapper {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 2px solid #222;
+
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url("https://www.placecage.com/960/580") no-repeat; /*../images/banker.jpg*/
+  /*background-position: 0 -20px;*/
+}
+
+.coder-wrapper, .coder-image {
+  border-radius: 0 8px 8px 0;
+  -moz-border-radius: 0 8px 8px 0;
+  -webkit-border-radius: 0 8px 8px 0;
+}
+.coder-wrapper {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  -webkit-transform: translateX(75%);
+  transform: translateX(75%);
+}
+.coder-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  -webkit-transform: translateX(-75%);
+  transform: translateX(-75%);
+
+  background: url("http://www.fillmurray.com/980/550") no-repeat; /*../images/coder.jpg*/
+  /*background-position: 0 -25px;*/
+}
