@@ -1,0 +1,46 @@
+/* HTML */
+<div><svg>
+<path class="path0" d="M35 140 H15 L45 200 L65 200 L105 120 L101 110 H28 L55 30 L78 100"></path>
+<path class="path1" d="M78 100 H98 L65 0 L55 10 L45 0 L5 120 L10 130 H80 L55 180 L35 140"></path>
+Sam Seabrook
+</svg></div>
+
+/* CSS */
+$scaling : 2;
+svg {
+	height: 220px * $scaling;
+	width: 120px * $scaling;
+	cursor: pointer;
+	&:hover path{
+		stroke: green;
+		stroke-width: 3;
+	}
+	z-index: 80;
+}
+path {
+	stroke: black;
+	stroke-width: 1;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+	animation: dash 2s linear forwards;
+	transform: scale($scaling);
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+/* JS */
+$(document).ready(function() {
+	var paths = document.getElementsByTagName('path');
+	var line,length;
+	for (i=0; i<2; i++) {
+		line = paths[i];	// path alias
+		length = line.getTotalLength();
+		line.style.strokeDasharray = length;
+		line.style.strokeDashoffset = length;
+	}
+});

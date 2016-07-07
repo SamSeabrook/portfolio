@@ -43,7 +43,7 @@ jQuery(document).ready( function($){
 			$('.page').each(function(i) {
 				if ($(this).position().top <= (windowScroll)) {
 					$('.page-nav li a.active').removeClass('active');
-					$('.page-nav li a').eq(i+1).addClass('active');
+					$('.page-nav li a').eq(i).addClass('active');
 				}
 			});
 		} else {
