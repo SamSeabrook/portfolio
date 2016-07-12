@@ -32,8 +32,8 @@ jQuery(document).ready( function($){
 		});
 	});
 
-	/*-----Live Update Active View-----*/
-	// This will highlight in the nav bar the 'active' page user is viewing
+	/*-----Update Active Page Selection-----*/
+	// This will highlight the tab corresponding to the current page
 	$(window).scroll( function() {
 		var banner = $('.page-nav').height();
 		var windowScroll = $(window).scrollTop();
@@ -43,7 +43,12 @@ jQuery(document).ready( function($){
 			$('.page').each(function(i) {
 				if ($(this).position().top <= (windowScroll)) {
 					$('.page-nav li a.active').removeClass('active');
-					$('.page-nav li a').eq(i).addClass('active');
+					if(i<2) {	// This accounts for skipping over the logo
+						$('.page-nav li a').eq(i).addClass('active');
+					}
+					else {
+						$('.page-nav li a').eq(i+1).addClass('active');
+					}
 				}
 			});
 		} else {
