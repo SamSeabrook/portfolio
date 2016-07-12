@@ -59,4 +59,16 @@ jQuery(document).ready( function($){
 		$('html body').animate({'scrollTop':$(location).offset().top}, 500);
 		event.preventDefault();
 	});
+
+	$('svg').on("hover", function(event) {
+		alert("Hello");
+		// var paths = document.getElementsByTagName('path');
+		// var line,length;
+		// for (i=0; i<2; i++) {
+		// 	line = paths[i];	// path alias
+		// 	length = line.getTotalLength();
+		// 	line.style.strokeDasharray = length;
+		// 	line.style.strokeDashoffset = length;
+		// }
+	});
 });

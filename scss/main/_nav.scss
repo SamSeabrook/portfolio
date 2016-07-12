@@ -35,12 +35,12 @@
 				background-color: #006600;
 			}
 		}
-		li:nth-child(2) {
+		/*li:nth-child(2) {
 			margin-right: 10%;
 		}
 		li:nth-child(3) {
 			margin-left: 10%;
-		}
+		}*/
 	}
 }
 
@@ -57,11 +57,34 @@
 }
 
 .logo-container {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 40%;
-	height: 200px;
-	width: 20%;
-	background-color: orange;
+}
+
+.logo {
+}
+
+svg {
+	height: 220px * $scaling;
+	width: 120px * $scaling;
+	cursor: pointer;
+	&:hover path{
+		stroke: green;
+		stroke-width: 3;
+	}
+	line-height: 100%;
+	vertical-align: center;
+}
+path {
+	stroke: black;
+	stroke-width: 3;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+	animation: dash 2s linear forwards;
+	transform: scale($scaling);
+}
+
+@keyframes dash {
+	to {
+		stroke-dashoffset: 0;
+	}
 }
