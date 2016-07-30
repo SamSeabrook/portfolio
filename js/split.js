@@ -41,7 +41,7 @@ jQuery(document).ready( function($){
 		if (windowScroll > (banner)) {
 			$('.page-nav').fadeIn(300);
 			$('.page').each(function(i) {
-				if ($(this).position().top <= (windowScroll)) {
+				if ($(this).position().top <= (windowScroll) + 5) { // '+ 5' adjusts for auto height
 					$('.page-nav li a.active').removeClass('active');
 					if(i<2) {	// This accounts for skipping over the logo
 						$('.page-nav li a').eq(i).addClass('active');
@@ -59,21 +59,35 @@ jQuery(document).ready( function($){
 
 	/*-----Scroll Navigation-----*/
 	// Scrolls screen to selected anchor on page
-	$('a').on('click', function() {
-		var location = (this).getAttribute("href");
+	$('.links').on('click', function() {
+		if((this).getAttribute("href")) {
+			var location = (this).getAttribute("href");
+		} else { // Must make separate function since svg doesn't have href attribute
+			var location = "#home";
+		}
 		$('html body').animate({'scrollTop':$(location).offset().top}, 500);
 		event.preventDefault();
 	});
-
-	$('svg').on("hover", function(event) {
-		alert("Hello");
-		// var paths = document.getElementsByTagName('path');
-		// var line,length;
-		// for (i=0; i<2; i++) {
-		// 	line = paths[i];	// path alias
-		// 	length = line.getTotalLength();
-		// 	line.style.strokeDasharray = length;
-		// 	line.style.strokeDashoffset = length;
-		// }
+	$('.logo-link').on('click', function() {
+		var location = "#home";
+		if (location.length) {
+			var locationTop = $(location).offset().top;
+		}
+		$('html body').animate({'scrollTop':$(location).offset().top}, 500);
 	});
+
+	// $('.logo-link').on({
+	// 	mouseenter: function() {
+	// 		var paths = document.getElementsByClassName('paths');
+	// 		var length=0;
+	// 		for (i=0; i<2; i++) {
+	// 			length = paths[i].getTotalLength();
+	// 			paths[i].style.strokeDasharray = length;
+	// 			paths[i].style.strokeDashoffset = length;
+	// 		}
+	// 	},
+	// 	mouseleave: function() {
+			
+	// 	}
+	// });
 });

@@ -17,10 +17,10 @@
 	<div class="container">
 		
 		<!-- Home Page -->
-		<section id="top">
+		<section id="home">
 			<!-- Begin Hero Image Split -->
 			<div class="split-wrapper">
-				<a href="#about" class="hero-btn"><span>See for<br/>yourself!</span></a>
+				<a href="#about" class="hero-btn links"><span>See for<br/>yourself!</span></a>
 				<div class="banker-wrapper">
 					<div class="hero-textwrapper">What can a former banker bring to software development?</div>
 					<div class="coder-wrapper">
@@ -41,11 +41,14 @@
 					</li><li>
 					<a href="#work" class="links">Work</a>
 					</li><li>
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-						<a xlink:href="#top" class="logo-anchor"> <!-- "http://www.someurl.com#top" -->
-							<path class="paths" d="M35 140 H15 L45 200 L65 200 L105 120 L101 110 H28 L55 30 L78 100"></path>
-							<path class="paths" d="M78 100 H98 L65 0 L55 10 L45 0 L5 120 L10 130 H80 L55 180 L35 140"></path>
-							Sam Seabrook
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="logo-link">
+						<a xlink:href="#home" class="logo-anchor">
+							<rect id="logo-background"></rect>
+							<svg class="logo" preserveAspectRatio="xMidYMid meet" viewbox="0 0 30 40">
+								<path class="paths" d="M35 140 H15 L45 200 L65 200 L105 120 L101 110 H28 L55 30 L78 100"></path>
+								<path class="paths" d="M78 100 H98 L65 0 L55 10 L45 0 L5 120 L10 130 H80 L55 180 L35 140"></path>
+								Sam Seabrook
+							</svg>
 						</a>
 					</svg>
 					</li><li>
@@ -56,7 +59,7 @@
 				</ul>
 			</nav>
 			ABOUT
-			<div class="about-me">
+			<div class="about-container">
 				<ul class="slider">
 					<li>
 					<input type="radio" id="slide1" name="slide" checked>
@@ -100,16 +103,116 @@
 		<!-- Work Page -->
 		<section id="work" class="page">
 			WORK
+			<div class="work-container">
+				<div class="projects-container">
+					<div class="project">Project 1</div>
+					<div class="project">Project 2</div>
+					<div class="project">Project 3</div>
+					<div class="project">Project 4</div>
+				</div>
+			</div>
 		</section>
 
 		<!-- Resume Page -->
 		<section id="resume" class="page">
 			RESUME
+			<div class="resume-container">
+				<div class="resumeSummary">
+					<h2>Professional Summary</h2>
+					<ul>
+						<li>
+						<span>Versatile and determined banker returning to his passion for programming and development</span>
+						</li><li>
+						<span>Blends computer science background with real-world experience to provide unique perspective</span>
+						</li><li>
+						<span>Known for delivering excellent work with responsibility and integrity</span>
+						</li><li>
+						<span>Capitalizes on every opportunity possible to learn and grow outside of the job description</span>
+						</li>
+					</ul>
+				</div> <!-- End Summary Section -->
+				<div class="resumeEducation">
+					<h2>Education & Independent Coursework</h2>
+					<div class="university">
+						<h3>Clemson University</h3>
+						<span>Computer Information Systems, B.S. 2013</span>
+					</span>
+					</div>
+					<div class="codeCamp">
+						<h3>Charleston Digital Corridor</h3>
+						<ul>
+							<li>Complete Web Basics Series</li>
+							<li>Object-Oriented Programming</li>
+							<li>Survey of JS Frameworks</li>
+							<li>Responsive Design Bootcamp</li>
+							<li>Agile Scrum Bootcamp</li>
+							<li>CODEtalks attendee - Oct. 2015</li>
+						</ul>
+					</div>
+					<br class="clear" />
+				</div> <!-- End Education Section -->
+				<div class="resumeSkills">
+					<h2>Skills & Tools</h2>
+					<div class="skill">
+					<ul>PROGRAMMING
+						<li>4+ years C and Java
+						</li><li>2+ years HTML and CSS
+						</li><li>1+ year of JS and jQuery
+						</li><li>Familiarity with PHP
+						</li>
+					</ul>
+					</div>
+					<div class="skill">
+					<ul>TOOLS
+						<li>Sublime Text 3
+						</li><li>Prepros
+						</li><li>Command Line Git
+						</li><li>Ubuntu Linux
+						</li>
+					</ul>
+					</div>
+					<div class="skill">
+					<ul>INTANGIBLES
+						<li>Team Leadership</li>
+						<li>Communication</li>
+						<li>Growth Mentality</li>
+						<li>Zeal to Learn</li>
+					</ul>
+					</div>
+				</div> <!-- End Skills Section -->
+				<div class="resumeExperience">
+					<h2>Experience</h2>
+					<h3>Southcoast Community Bank - Mount Pleasant</h3>
+						<h4>Loan Servicing</h4>
+							<span>August 2015 - July 2016</span>
+						<h4>Collections</h4>
+							<span>June 2014 - July 2016</span>
+						<h4>Teller</h4>
+							<span>February 2014 - May 2014</span>
+					<h3>Phi Sigma Kappa - Clemson University - Clemson, SC</h3>
+						<h4>Executive Board Member</h4>
+							<span>January 2012 - December 2012</span>
+					<h3>Air Force ROTC - Clemson University - Clemson, SC</h3>
+						<h4>GAMA Cup Commander</h4>
+							<span>January 2010 - March 2010</span>
+				</div> <!-- End Experience Section -->
+			</div>
 		</section>
 
 		<!-- Contact Page -->
 		<section id="contact" class="page">
 			CONTACT
+			<header class="resumeIntro">
+				<h1>Samuel M. Seabrook</h1>
+				<h3>Software Developer</h3>
+				<h5>Icon and Email Here</h5>
+				<h5>Icon and LinkedIn</h5>
+				<h5>Icon and GitHub</h5>
+			</header> <!-- End Intro Info Section -->
+			<hr />
+			<span>&copy; 2016 Sam Seabrook</span><br />
+			<span>All Rights Reserved</span>
+				
 		</section>
 	</div>
 </body>

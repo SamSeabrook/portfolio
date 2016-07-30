@@ -3,8 +3,16 @@
   letter-spacing: 1px;
 }
 
-.clearfix {
+.clear {
   clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 body {
@@ -13,7 +21,7 @@ body {
 }
 
 .container {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   background: #FFF;
 }
@@ -73,7 +81,19 @@ table {
   border-spacing: 0;
 }
 
-#top {
+.left {
+  clear: left;
+}
+
+.right {
+  clear: right;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#home {
   height: 100vh;
   background: #999;
 }
@@ -83,10 +103,13 @@ table {
   font-size: 20px;
   text-transform: uppercase;
   width: 960px;
+  max-height: 600px;
   height: 80vh;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .hero-btn {
@@ -102,7 +125,8 @@ table {
   color: ghostwhite;
   line-height: 25px;
   border: 2px solid ghostwhite;
-  transition: all 150ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
   overflow: hidden;
   z-index: 5;
 }
@@ -123,7 +147,8 @@ table {
   height: 100%;
   background: white;
   z-index: 7;
-  transition: all 150ms ease-in-out;
+  -webkit-transition: all 150ms ease-in-out;
+          transition: all 150ms ease-in-out;
 }
 
 .hero-btn:hover {
@@ -147,15 +172,11 @@ table {
 .divider-bar {
   position: absolute;
   width: 4px;
-  left: 74%;
+  left: 75%;
   top: -10px;
   bottom: -10px;
   background-image: -webkit-linear-gradient(top, rgba(59, 144, 203, 0) 0, #64b700 2%, #64b700 98%, rgba(59, 144, 203, 0) 100%);
-  background-image: -moz-linear-gradient(top, rgba(59, 144, 203, 0) 0, #64b700 2%, #64b700 98%, rgba(59, 144, 203, 0) 100%);
-  background-image: -o-linear-gradient(top, rgba(59, 144, 203, 0) 0, #64b700 2%, #64b700 98%, rgba(59, 144, 203, 0) 100%);
   background-image: linear-gradient(to bottom, rgba(59, 144, 203, 0) 0, #64b700 2%, #64b700 98%, rgba(59, 144, 203, 0) 100%);
-  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -169,7 +190,7 @@ table {
   width: 100%;
   height: 100%;
   position: relative;
-  background: url("https://www.placecage.com/960/580") no-repeat;
+  background: url("https://www.placecage.com/960/600") no-repeat;
   /*../images/banker.jpg*/
   /*background-position: 0 -20px;*/
 }
@@ -188,30 +209,31 @@ table {
   right: 0;
   bottom: 0;
   -webkit-transform: translateX(75%);
-  transform: translateX(75%);
+  -ms-transform: translateX(75%);
+      transform: translateX(75%);
 }
 
 .coder-image {
   display: block;
-  width: 100%;
   height: 100%;
+  object-fit: contain;
   position: relative;
   -webkit-transform: translateX(-75%);
-  transform: translateX(-75%);
-  background: url("http://www.fillmurray.com/980/550") no-repeat;
+  -ms-transform: translateX(-75%);
+      transform: translateX(-75%);
+  background: url("http://www.fillmurray.com/980/600") no-repeat;
   /*../images/coder.jpg*/
-  /*background-position: 0 -25px;*/
 }
 
 .page-nav {
-  background-color: #333;
+  background-color: #333333;
   overflow: hidden;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 45px;
-  line-height: 45px;
+  line-height: 50px;
   z-index: 99;
   display: none;
 }
@@ -222,12 +244,6 @@ table {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  /*li:nth-child(2) {
-			margin-right: 10%;
-		}
-		li:nth-child(3) {
-			margin-left: 10%;
-		}*/
 }
 
 .page-nav ul li {
@@ -250,31 +266,51 @@ table {
   text-transform: uppercase;
 }
 
-.page-nav ul li:hover:not(.active) {
+.page-nav ul li:hover {
   background-color: #006600;
 }
 
 .page-nav ul li svg {
-  height: 44px;
-  width: 24px;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
   line-height: 100%;
   vertical-align: center;
 }
 
 .page-nav ul li svg:hover path {
-  stroke: #333;
+  stroke: #333333;
   stroke-width: 10;
 }
 
+.page-nav ul li .logo-background {
+  width: 100%;
+  height: 100%;
+  fill: none;
+}
+
+.page-nav ul li .logo {
+  width: 100%;
+  height: 100%;
+}
+
 .page-nav ul li .paths {
-  stroke: green;
+  stroke: #009900;
   stroke-width: 8;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
-  animation: dash 2s linear forwards;
-  transform: scale(0.2);
+  -webkit-animation: dash 2s linear forwards;
+          animation: dash 2s linear forwards;
+  -webkit-transform: scale(0.19);
+      -ms-transform: scale(0.19);
+          transform: scale(0.19);
+}
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes dash {
@@ -287,8 +323,13 @@ table {
   background-color: #009900;
 }
 
+.active:hover {
+  background-color: #006600;
+}
+
 .page {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   font-size: 50px;
   text-align: center;
   padding-top: 45px;
@@ -301,17 +342,18 @@ table {
   height: 100%;
 }
 
-.about-me {
+.about-container {
   outline: 1px dashed red;
 }
 
 .slider {
   position: relative;
   margin: 0 auto;
-  height: 40vh;
+  height: 50vh;
   width: 90%;
   outline: 1px solid green;
   overflow: hidden;
+  /* Navigation Dots */
 }
 
 .slider li {
@@ -319,11 +361,20 @@ table {
   position: absolute;
 }
 
+.slider li input:checked ~ img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
 .slider input {
   display: none;
 }
 
-/* Navigation Dots */
+.slider input:checked + label {
+  background-color: #333;
+}
+
 .slider label {
   position: absolute;
   display: block;
@@ -334,7 +385,8 @@ table {
   bottom: 3rem;
   height: .6rem;
   width: .6rem;
-  transition: .5s;
+  -webkit-transition: .5s;
+          transition: .5s;
   cursor: pointer;
   z-index: 10;
   opacity: 0;
@@ -344,10 +396,6 @@ table {
 .slider:hover label {
   opacity: 1;
   visibility: visible;
-}
-
-.slider input:checked + label {
-  background-color: #333;
 }
 
 .slider:hover li:nth-child(1) label {
@@ -366,15 +414,10 @@ table {
   height: 100%;
   width: 100%;
   vertical-align: top;
-  transition: .5s;
+  -webkit-transition: .5s;
+          transition: .5s;
   opacity: 0;
   visibility: hidden;
-}
-
-.slider li input:checked ~ img {
-  opacity: 1;
-  visibility: visible;
-  z-index: 10;
 }
 
 .traits {
@@ -404,4 +447,105 @@ table {
 .trait:last-child {
   position: absolute;
   right: 0;
+}
+
+.work-container {
+  outline: 1px dashed blue;
+}
+
+.projects-container {
+  /*outline: 1px solid green;*/
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+
+.project {
+  float: left;
+  width: 23.3%;
+  height: 97%;
+  position: relative;
+  outline: 1px solid black;
+  padding: 1rem;
+  margin: .5rem;
+}
+
+.resume-container {
+  outline: 1px dashed orange;
+}
+
+.resume-container h2 {
+  margin: .5rem;
+}
+
+.resumeSummary {
+  margin-top: .5rem;
+  outline: 1px solid red;
+}
+
+.resumeEducation {
+  margin-top: .5rem;
+  outline: 1px solid blue;
+}
+
+.resumeEducation .university {
+  margin: .5rem;
+}
+
+.resumeEducation .university:hover {
+  color: orange;
+}
+
+.resumeEducation .codeCamp:hover {
+  color: #00a4e4;
+}
+
+.resumeEducation .codeCamp ul {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.resumeEducation .codeCamp ul li {
+  display: inline-block;
+}
+
+.resumeEducation .codeCamp ul li:nth-child(odd) {
+  float: left;
+}
+
+.resumeEducation .codeCamp ul li:nth-child(even) {
+  float: right;
+}
+
+.resumeSkills {
+  outline: 1px solid blue;
+  width: 100%;
+  height: 100%;
+}
+
+.resumeSkills .skill {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+  width: 25%;
+  height: 85%;
+}
+
+.resumeSkills .skill ul {
+  border: 1px solid black;
+  padding: .5rem 0;
+}
+
+.resumeSkills .skill ul li {
+  padding-top: .5rem;
+}
+
+.resumeSkills .skill ul li:nth-child(1) {
+  padding-top: 1rem;
+}
+
+.resumeExperience {
+  margin-top: .5rem;
+  outline: 1px solid red;
 }

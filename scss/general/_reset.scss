@@ -47,3 +47,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.left {
+	clear: left;
+}
+
+.right {
+	clear: right;
+}
+
+.clearfix{
+	clear: both;
+}

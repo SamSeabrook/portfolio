@@ -1,12 +1,12 @@
 .page-nav {
-	background-color: #333;
+	background-color: $backgroundColor;
 	overflow: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: $bannerHeight;
-	line-height: $bannerHeight;
+	line-height: $bannerHeight + 5px;
 	z-index: 99;
 	display: none;
 	ul {
@@ -32,22 +32,31 @@
 				text-decoration: none;
 				text-transform: uppercase;
 			}
-			&:hover:not(.active) {
-				background-color: #006600;
+			&:hover {
+				background-color: $accentDark;
 			}
 			svg {
-				height: 220px * $scaling;
-				width: 120px * $scaling;
+				height: 100%;
+				width: 100%;
 				cursor: pointer;
 				&:hover path{
-					stroke: #333;
+					stroke: $backgroundColor;
 					stroke-width: 10;
 				}
 				line-height: 100%;
 				vertical-align: center;
 			}
+			.logo-background {
+				width: 100%;
+				height: 100%;
+				fill: none;
+			}
+			.logo {
+				width: 100%;
+				height: 100%;
+			}
 			.paths {
-				stroke: green;
+				stroke: $accentColor;
 				stroke-width: 8;
 				stroke-linecap: round;
 				stroke-linejoin: round;
@@ -62,30 +71,28 @@
 				}	
 			}
 		}
-		/*li:nth-child(2) {
-			margin-right: 10%;
-		}
-		li:nth-child(3) {
-			margin-left: 10%;
-		}*/
 	}
 }
 
-	.active {
-		background-color: #009900;
+.active {
+	background-color: $accentColor;
+	&:hover {
+		background-color: $accentDark;
 	}
+}
 
 
-	.page {
-		height: 100vh;
-		font-size: 50px;
-		text-align: center;
-		padding-top: $bannerHeight;
-	}
+.page {
+	min-height: 100vh;
+	height: 100%;
+	font-size: 50px;
+	text-align: center;
+	padding-top: $bannerHeight;
+}
 
-	.logo-anchor {
-		position: relative;
-		display: block;
-		width: 100%;
-		height: 100%;
-	}
+.logo-anchor {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}

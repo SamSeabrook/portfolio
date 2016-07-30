@@ -1,0 +1,69 @@
+.resume-container {
+	outline: 1px dashed orange;
+	h2 {
+		margin: .5rem;
+	}
+}
+
+.resumeSummary {
+	margin-top: .5rem;
+	outline: 1px solid red;
+}
+
+.resumeEducation {
+	margin-top: .5rem;
+	outline: 1px solid blue;
+	.university {
+		margin: .5rem;
+		&:hover {
+			color: orange;
+		}
+	}
+	.codeCamp {
+		&:hover {
+			color: #00a4e4;
+		}
+		ul {
+			margin: 0 auto;
+			width: 60%;
+			li {
+				display: inline-block;
+			}
+			li:nth-child(odd) {
+				float: left;
+			}
+			li:nth-child(even) {
+				float: right;
+			}
+		}
+	}
+}
+
+.resumeSkills {
+	outline: 1px solid blue;
+	width: 100%;
+	height: 100%;
+	.skill {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 auto;
+		width: 25%;
+		height: 85%;
+		ul {
+			border: 1px solid black;
+			padding: .5rem 0;
+			li {
+				padding-top: .5rem;
+			}
+			li:nth-child(1) {
+				padding-top: 1rem;
+			}
+		}
+	}
+}
+
+.resumeExperience {
+	margin-top: .5rem;
+	outline: 1px solid red;
+}
