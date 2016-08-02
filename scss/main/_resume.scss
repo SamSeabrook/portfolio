@@ -1,18 +1,16 @@
 .resume-container {
 	outline: 1px dashed orange;
-	h2 {
-		margin: .5rem;
-	}
+	margin: 0 auto;
 }
 
-.resumeSummary {
-	margin-top: .5rem;
-	outline: 1px solid red;
+.res {
+	border-bottom: 1px solid #aaa;
+	padding: .5rem;
+}
+.summary {
 }
 
-.resumeEducation {
-	margin-top: .5rem;
-	outline: 1px solid blue;
+.education {
 	.university {
 		margin: .5rem;
 		&:hover {
@@ -39,8 +37,7 @@
 	}
 }
 
-.resumeSkills {
-	outline: 1px solid blue;
+.skills {
 	width: 100%;
 	height: 100%;
 	.skill {
@@ -48,13 +45,15 @@
 		display: inline-block;
 		vertical-align: top;
 		margin: 0 auto;
-		width: 25%;
+		width: 32%;
 		height: 85%;
 		ul {
 			border: 1px solid black;
+			font-weight: bold;
 			padding: .5rem 0;
 			li {
 				padding-top: .5rem;
+				font-weight: normal;
 			}
 			li:nth-child(1) {
 				padding-top: 1rem;
@@ -63,7 +62,5 @@
 	}
 }
 
-.resumeExperience {
-	margin-top: .5rem;
-	outline: 1px solid red;
+.experience {
 }

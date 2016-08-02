@@ -7,10 +7,10 @@
 	<meta name="author" content="Sam Seabrook">
 	<meta charset="UTF-8">
 	
-
-	<link href="css/styles.css" type="text/css" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/split.js"></script>
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> <!-- Font Awesome Icons -->
+	<link href="css/styles.css" type="text/css" rel="stylesheet"> <!-- CSS sheet -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <!-- jQuery -->
+	<script src="js/split.js"></script> <!-- JS sheet -->
 </head>
 
 <body>
@@ -58,51 +58,51 @@
 					</li>
 				</ul>
 			</nav>
-			ABOUT
 			<div class="about-container">
-				<ul class="slider">
+				<div class="aboutMe left">
+					<h1>Sam Seabrook</h1><br />
+					<h2>Hello World!</h2><br />
+					<p>I'm a Charleston-born Computer Science grad getting back to his passion for programming.  After many nights and weekends coding and learning to shift careers, I'm ready to dive in.  Have a look around and see what I can do, then <a href="#contact">CONTACT ME<a></p><br />
+				</div>
+				<ul class="slider right">
 					<li>
-					<input type="radio" id="slide1" name="slide" checked>
+						<input type="radio" id="slide1" name="slide" checked>
 						<label for="slide1"></label>
-						<img src="http://www.fillmurray.com/900/300" alt="picture 1" />
+						<img src="http://www.fillmurray.com/500/400" alt="picture 1" />
 					</li>
 					<li>
 						<input type="radio" id="slide2" name="slide">
 						<label for="slide2"></label>
-						<img src="https://spaceholder.cc/900x300" alt="picture 2" />
+						<img src="https://spaceholder.cc/500x400" alt="picture 2" />
 					</li>
 					<li>
 						<input type="radio" id="slide3" name="slide">
 						<label for="slide3"></label>
-						<img src="https://www.placecage.com/g/900/300" alt="picture 3"/>
+						<img src="https://www.placecage.com/g/500/400" alt="picture 3"/>
 					</li>
 				</ul>
-				<div class="traits">
-					<div class="trait"><h2>Integrity</h2><br />
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur.</p></div>
-					<div class="trait"><h2>Growth</h2><br />
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur.</p></div>
-					<div class="trait"><h2>Performance</h2><br />
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur.</p></div>
+				<div class="traits clearfix">
+					<div class="trait left">
+						<i class="fa fa-balance-scale fw"></i><br />
+						<span>Integrity</span>
+						<p>It's more than just words - it's truth in action. Having spent close to a decade in various USAF training programs, acting with integrity is deeply ingrained in my character.  Whether it's owning up to a mistake or skipping the shortcut, I work to do the right thing.</p>
+					</div>
+					<div class="trait left">
+						<i class="fa fa-line-chart fw"></i><br />
+						<span>Growth</span>
+						<p>I strive to never stop learning and approach situations with the mindset that anyone could teach me something new.  I want to build others up with my success, but I'm humble enough to know that you learn most from listening. I yearn to continue learning and improving!</p>
+					</div>
+					<div class="trait left">
+						<i class="fa fa-trophy fw"></i><br />
+						<span>Performance</span>
+						<p>Finding more efficient ways to complete tasks and pushing the status quo keep me engaged.  Along with growth, my hunger for achievement encourages me to step outside of the job description and see how all the different pieces work. I'm constantly looking for what new knowledge I can contribute.</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<!-- Work Page -->
-		<section id="work" class="page">
-			WORK
+		<section id="work" class="page clearfix">
 			<div class="work-container">
 				<div class="projects-container">
 					<div class="project">Project 1</div>
@@ -117,8 +117,8 @@
 		<section id="resume" class="page">
 			RESUME
 			<div class="resume-container">
-				<div class="resumeSummary">
-					<h2>Professional Summary</h2>
+				<div class="res summary">
+					<h4>Professional Summary</h4>
 					<ul>
 						<li>
 						<span>Versatile and determined banker returning to his passion for programming and development</span>
@@ -131,12 +131,11 @@
 						</li>
 					</ul>
 				</div> <!-- End Summary Section -->
-				<div class="resumeEducation">
+				<div class="res education">
 					<h2>Education & Independent Coursework</h2>
 					<div class="university">
 						<h3>Clemson University</h3>
 						<span>Computer Information Systems, B.S. 2013</span>
-					</span>
 					</div>
 					<div class="codeCamp">
 						<h3>Charleston Digital Corridor</h3>
@@ -149,12 +148,12 @@
 							<li>CODEtalks attendee - Oct. 2015</li>
 						</ul>
 					</div>
-					<br class="clear" />
+					<br class="clearfix" />
 				</div> <!-- End Education Section -->
-				<div class="resumeSkills">
+				<div class="res skills">
 					<h2>Skills & Tools</h2>
 					<div class="skill">
-					<ul>PROGRAMMING
+					<ul>Programming
 						<li>4+ years C and Java
 						</li><li>2+ years HTML and CSS
 						</li><li>1+ year of JS and jQuery
@@ -163,7 +162,7 @@
 					</ul>
 					</div>
 					<div class="skill">
-					<ul>TOOLS
+					<ul>Tools
 						<li>Sublime Text 3
 						</li><li>Prepros
 						</li><li>Command Line Git
@@ -172,15 +171,15 @@
 					</ul>
 					</div>
 					<div class="skill">
-					<ul>INTANGIBLES
-						<li>Team Leadership</li>
-						<li>Communication</li>
-						<li>Growth Mentality</li>
+					<ul>Intangibles
 						<li>Zeal to Learn</li>
+						<li>Team Leadership</li>
+						<li>Growth Mentality</li>
+						<li>Effective Communicator</li>
 					</ul>
 					</div>
 				</div> <!-- End Skills Section -->
-				<div class="resumeExperience">
+				<div class="res experience">
 					<h2>Experience</h2>
 					<h3>Southcoast Community Bank - Mount Pleasant</h3>
 						<h4>Loan Servicing</h4>
@@ -201,22 +200,33 @@
 
 		<!-- Contact Page -->
 		<section id="contact" class="page">
-			CONTACT
-			<header class="resumeIntro">
-				<h1>Samuel M. Seabrook</h1>
-				<h3>Software Developer</h3>
-				<h5>Icon and Email Here</h5>
-				<h5>Icon and LinkedIn</h5>
-				<h5>Icon and GitHub</h5>
-			</header> <!-- End Intro Info Section -->
-			<hr />
-			<span>&copy; 2016 Sam Seabrook</span><br />
-			<span>All Rights Reserved</span>
-				
+			<div class="contactHeader">
+				<p>Want to talk? Please reach out using the contact form or stalk my social media!</p>
+			</div>
+			<section class="contactForm">
+			
+				<form class="left" method="post" action="index.html">
+					<label>Name</label>
+					<input name="name" placeholder="What's your name?" />
+					<label>Email</label>
+					<input name="email" type="email" placeholder="How can I reach you?" />
+					<label>Message</label>
+					<textarea name="message" placeholder="Type Here!" style=""></textarea> 
+
+					<input id="submit" name="submit" type="submit" value="Send it!" />
+				</form>
+				<div class="contactBasics left">
+					<span>Samuel M. Seabrook</span>
+					<span>Software Developer</span>
+					<span><i class="fa fa-envelope-o fa-fw"></i>  samseabrook(at)gmail.com</span>
+					<span><i class="fa fa-linkedin-square fa-fw"></i>  https://www.linkedin.com/in/samseabrook</span>
+					<span><i class="fa fa-github fa-fw"></i>  https://github.com/SamSeabrook</span>
+				</div> <!-- End Contact Basics Section -->
+				<br class="clearfix" />
+			</section>
+			<span class="footerName">&copy; 2016 Sam Seabrook. All Rights Reserved</span>
 		</section>
+		
 	</div>
 </body>
-<footer>
-</footer>
 </html>
-<!--test-->

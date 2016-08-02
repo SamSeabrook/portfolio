@@ -3,25 +3,24 @@
 	letter-spacing: 1px;
 }
 
-.clear {
-	clear: both;
-}
-
-.left {
-	float: left;
-}
-
-.right {
-	float: right;
-}
-
 body {
-  background: #999;
+  background-color: #999;
+ /* background-image: url(https://richedwardsimagery.files.wordpress.com/2015/10/diamond-shaped-tower-of-the-arthur-ravenel-jr-bridge-in-charleston-harbor-charleston-south-carolina-usa.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;*/
   width: 98vw;
 }
+
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+h6{}
 
 .container {
   max-width: 960px;
   margin: 0 auto;
-  background: #FFF;
+  background: #ddd;
 }

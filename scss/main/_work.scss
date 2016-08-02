@@ -11,10 +11,12 @@
 
 .project {
 	float: left;
-	width: 23.3%;
-	height: 97%;
+	width: 23.2%;
+	height: 96%;
+	vertical-align: center;
 	position: relative;
-	outline: 1px solid black;
+	border: 1px solid black;
 	padding: 1rem;
-	margin: .5rem;
+	margin-left: .5rem;
+	margin-right: .5rem;
 }
