@@ -1,2 +1,2 @@
 # portfolio
-My personal portfolio website. Although there are some elements that can be implemented in BootStrap, all coding & design was done from scratch for the sake of practice.  
+This is an incomplete portfolio I was working on from scratch.  I used it to test out some elements and practice before implementing my portfolio with Bootstrap 3.
